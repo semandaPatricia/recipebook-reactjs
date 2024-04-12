@@ -22,9 +22,9 @@ const recipes = [
 function RecipeDetails() {
   return (
     <div className="recipe_details">
-      <ul className="pb-10 list-none bg-primary text-amber-500 text-accent flex py-6 bg-slate-600">
+      <ul className="pb-10 list-none bg-primary text-amber-500 text-accent flex flex-wrap justify-center py-6 bg-slate-600">
         {recipes.map((detail, index) => (
-          <li key={index} className="flex-1 flex justify-center items-center flex-col font-serif text-base font-normal tracking-wider italic">
+          <li key={index} className="w-full sm:w-1/2 md:w-1/4 flex justify-center items-center flex-col font-serif text-base font-normal tracking-wider italic">
             <span className="font-bold text-xl uppercase tracking-wide">{detail.title}</span>
             {detail.value}
           </li>

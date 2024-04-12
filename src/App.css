@@ -1,14 +1,15 @@
 * {
 	box-sizing: border-box;
+	margin: 0 ;
 	padding: 0;
-	margin: 0;
 	transition: all 0.2s ease;
+	
 }
 
 :root {
 	--color-bg: #f6f6f6;
 	--color-accent: #b69c6f;
-	--color-primary: #a3b4e7;
+	--color-primary: #e5f5e2;
 }
 
 html,
@@ -18,8 +19,11 @@ body {
 }
 
 .pages {
-	color: #316685;
-	text-align: center;
-	font-size: 3.5rem;
-	margin-top: 10%;
+	margin: 0 80px; /* Default margin for all screens */
+  
+	/* Media query for screens smaller than or equal to 768px (typical tablet screens) */
+	@media (max-width: 768px) {
+	  margin: 0 20px; /* Adjusted margin for small screens */
+	}
   }
+  

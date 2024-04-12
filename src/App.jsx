@@ -2,18 +2,19 @@
 import "./App.css";
 import NavBar from "./components/Navbar";
 import { BrowserRouter as Router,  Route, Routes } from "react-router-dom";
-
 import Home from "./pages/home/index";
 import About  from "./pages/about/index";
 import  Blog  from "./pages/blog/index";
 import  Contact  from "./pages/contact/index";
-
+import ActiveSlider from "./components/ActiveSlider";
+import AquaticAnimals from "./components/Example"
 
 function App() {
   return (
     <>
       <Router>
         <NavBar />
+        
 
         <div className="pages">
           <Routes>

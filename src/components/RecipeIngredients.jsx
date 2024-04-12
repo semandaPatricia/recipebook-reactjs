@@ -1,18 +1,17 @@
 import React, { useState } from "react";
 import { RiCheckboxBlankLine, RiCheckboxLine } from 'react-icons/ri';
+
 function RecipeIngredients() {
   // Define state to manage checkbox values
   const [ingredients, setIngredients] = useState([
     { name: "spaghetti", label: "8 oz. spaghetti or linguine pasta", checked: false },
     { name: "basilLeaves", label: "2 cups fresh basil leaves, plus 4-8 reserved leaves for garnish", checked: false },
     { name: "garlic", label: "2 cloves garlic", checked: false },
-    { name: "garlic", label: " 1/2 cup olive oil", checked: false },
-    { name: "garlic", label: "2 cloves garlic", checked: false },
-    { name: "garlic", label: "1/2 cup grated Parmesan cheese, plus 2 tbsp. for garnish.", checked: false },
-    { name: "garlic", label: "1 pinch of salt", checked: false },
-    { name: "garlic", label: "2 tbsp. pine nuts or blanched almonds", checked: false },
-    { name: "garlic", label: "1 pint cherry tomatoes", checked: false },
-    { name: "garlic", label: "1 pint cherry tomatoes", checked: false },
+    { name: "oliveOil", label: "1/2 cup olive oil", checked: false },
+    { name: "parmesanCheese", label: "1/2 cup grated Parmesan cheese, plus 2 tbsp. for garnish.", checked: false },
+    { name: "salt", label: "1 pinch of salt", checked: false },
+    { name: "nuts", label: "2 tbsp. pine nuts or blanched almonds", checked: false },
+    { name: "cherryTomatoes", label: "1 pint cherry tomatoes", checked: false },
   ]);
 
   // Function to handle checkbox changes
@@ -28,10 +27,9 @@ function RecipeIngredients() {
   };
 
   return (
-<div className="ingredients mb-6">
+    <div className="ingredients mb-6">
       {ingredients.map(ingredient => (
         <label key={ingredient.name} className="container flex items-center">
-          
           <input
             type="checkbox"
             name={ingredient.name}
@@ -39,8 +37,7 @@ function RecipeIngredients() {
             onChange={() => handleCheckboxChange(ingredient.name)}
             className="hidden"
           />
-        
-          {ingredient.checked ? <RiCheckboxLine className="checkmark" /> : <RiCheckboxBlankLine className="checkmark" />}
+          {ingredient.checked ? <RiCheckboxLine className="checkmark mr-2" /> : <RiCheckboxBlankLine className="checkmark mr-2" />}
           <span>{ingredient.label}</span>
         </label>
       ))}
