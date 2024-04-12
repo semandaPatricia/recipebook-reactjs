@@ -29,7 +29,7 @@ const Test = () => {
 
          {/*Description-title of food to be made */}
        <RecipeDescription/>
-       
+
         {/*servings,time */}
         <RecipeDetails/>
 
@@ -40,6 +40,7 @@ const Test = () => {
             </h2>
             {/*Ingredients */}
             <RecipeIngredients />
+            
             <p className="variation text-base mb-12">
               <span className="font-semibold uppercase tracking-wider">
                 Variation:
